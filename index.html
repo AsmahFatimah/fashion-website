@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.js">
+    <script src="https://kit.fontawesome.com/0d437a0576.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/font/Magic Sound.ttf">
+    <link rel="stylesheet" href="assets/font/Lora-Regular.ttf">
+    <link rel="stylesheet" href="assets/splide/css/themes/splide-default.min.css">
+    <script src="assets/splide/js/splide.min.js"></script>
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: lora;
+            src: url(assets/font/Lora-Regular.ttf);
+        }
+        @font-face {
+            font-family: magicSound;
+            src: url(assets/font/Magic\ Sound.ttf);
+        }
+        body{
+            background-color: #f4ebe4;
+        }
+        .banner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: .03rem;
+            background: hsla(13, 100%, 90%, 1);
+            background: linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+            background: -moz-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+            background: -webkit-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+            text-transform: capitalize;
+            padding: .3rem;
+            border-start-start-radius: 1.2rem;
+            border-start-end-radius: 1.2rem;
+            border-bottom: .1rem solid black;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2rem;
+
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+            padding: 1rem 2rem 1rem 2rem;
+        }
+        nav a{
+            text-decoration: none;
+            color: inherit;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .navActive{
+            background: hsla(13, 100%, 90%, 1);
+            background: linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+            background: -moz-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+            background: -webkit-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+            border-radius: 50%;
+            border: .2rem solid black;
+        }
+        .mobileLogo{
+            display: none;
+        }
+        .hamburgerMenu{
+            display: none;
+        }
+        
+        .close{
+            visibility: hidden;
+        }
+        
+        .logo{
+            text-transform: lowercase;
+            font-weight: 900;
+            font-size: 2rem;
+            font-family: magicSound;
+            color: #55412f
+        }
+        nav a:hover{
+            color: inherit;
+        }
+        .mobileLogo{
+            display: none;
+        }
+        .heroSection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 5rem;
+        }
+        .heroSection h1{
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 5rem;
+            text-align: center;
+            font-family: lora;
+            word-spacing: .5rem;
+            color: #534332;
+
+        }
+        .heroSection button, .imgGallery button, footer button{
+            background-color: inherit;
+            border-radius: 20rem;
+            padding: .2rem 2.2rem .2rem 2.2rem;
+            font-weight: 500;
+            font-style: italic;
+        }
+        .line{
+            width: .2rem;
+            height: 6.5rem;
+            background-color: black;
+        }
+        
+        .borderBottom{
+            border-bottom: .2rem solid black;
+        }
+        .bestieSection, .imgGallery{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 6rem .2rem 6rem;
+
+        }
+        .bestieSection h2{
+            color: #534332;
+        }
+        .bestieSection h6{
+            text-align: center;
+            margin: 0 20% 1rem 20%;
+            line-height: 1.5rem;
+        }
+        .secondSection{
+            background-color: #f7c5ba;
+            padding-top: 5rem ;
+        }
+        .imgContainer{
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+        .imgs{
+            width: 10%;
+            max-width: 70%;
+            height: auto;
+        }
+        .imgs img{
+            width: 100%;
+            object-fit: contain;
+        }
+        .bottom{
+            height: 55%;
+        }
+        .splide img{
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+        .splide{
+            /* height: 80vh; */
+            padding:3rem .5rem 4rem .5rem;
+        }
+        .splide .imgGallery h6{
+            font-size: 1rem;
+            font-weight: 900;
+            margin-top: 4rem;
+        }
+        .imgGallery .line{
+            height: 2rem;
+        }
+
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .footerLogo{
+            font-family: magicSound;
+            font-size: 2rem;
+        }
+        footer .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        footer .imgs{
+            width: 20%;
+        }
+        footer img{
+            border-radius: 2%;
+            border: .1rem solid black;
+            box-shadow: rgba(0, 0, 0, 0.21) 0px 3px 8px;
+            /* box-shadow: rgba(126, 29, 29, 0.2) 0px 2px 8px 0px; */
+        }
+        .box{
+            padding: 3rem;
+        }
+        footer ul{
+            display: flex;
+            flex-direction: column;
+        } 
+        footer ul li{
+            padding: .5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        footer button{
+            background: hsla(13, 100%, 90%, 1);
+            background: linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+            background: -moz-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+            background: -webkit-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
+        }
+
+        @media (max-width: 480px){
+            .heroSection h1{
+                font-size: 2rem;
+                font-weight: 600;
+                line-height: 3rem;
+            }
+            .bestieSection h6{
+                text-align: justify;
+            }
+            .imgGallery button{
+                padding: .2rem .3rem .2rem .2rem;
+                border-radius: 10rem;
+                font-weight: 450;
+            }
+            .imgContainer{
+                gap: 1rem;
+            }
+            .imgs{
+                width: 25%;
+                max-width: 70%;
+                height: auto;
+            }
+            footer{
+                padding: 1rem 0 0.5rem 0;
+                gap: .1rem;
+            }
+            footer .line{
+                display: none;
+            }
+            footer .menu{
+                flex-wrap: wrap;
+            }
+           .column3{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                text-align: center;
+            }
+           .box{
+                padding: .5rem;
+            }
+           footer ul{
+                display: flex;
+                flex-direction: row;
+            }
+           footer ul li{
+                padding: .3rem;
+            }
+           footer img{
+                display: none;
+            }
+        }
+
+        @media (max-width: 786px) {
+           
+           .mobileLogo{
+                display: block;
+           }
+           .hamburgerMenu{
+                display: block;
+           }
+           .menuBtn{
+                position: absolute;
+                top: 12%;
+                left: 5%;
+                background-color: inherit;
+                border: none;
+                font-size: 1.5rem;
+            }
+           
+           .close{
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                z-index: 1;
+                background-color: #D82604;
+                border: none;
+                border-radius: 50%;
+                padding: .1rem .4rem .1rem .4rem;
+            }
+           .close i{
+                font-size: 1.3rem;
+                color: white;
+            }
+           ul{
+                display: none;
+            
+            }
+           .logo-lg{
+                display: none;
+            }
+          
+           .active.menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                animation: slidein .5s ease;
+            }
+            @keyframes slidein {
+                0%{
+                    transform: translateX(-100%);
+                }
+                100%{
+                    transform: translateX(0);
+                }
+            }
+            .overlay{
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: antiquewhite;
+            }
+            .menuLinks{
+                color: #939393;
+            }
+            .menuLinks:focus a{
+                color: black;
+            }
+            
+            .logo{
+                font-size: 1.5rem;
+                color: black;
+            }
+            .bestieSection{
+                padding: 0 .5rem .2rem .5rem;
+            }
+            .bestieSection h6{
+                margin: 0 5% 1rem 5%;
+            }
+        }
+
+         
+        
+        
+    </style>
+</head>
+<body>
+        <header class="banner">
+            <h6>14% off on everything</h6>
+        </header>
+        
+    <nav>
+        <div class="hamburgerMenu">
+          <button class="menuBtn"><i class="fa-solid fa-bars-staggered"></i></button>
+        </div>
+        <a href="#" class="mobileLogo logo">smol.</a>
+        <div class="overlay">
+          <button class="close"><i class="fa-solid fa-xmark"></i></button>  
+        <ul class="menu">
+            <li class="navActive"><a href="" class="menuLinks">home</a></li>
+            <li><a href="" class="menuLinks">shop</a></li>
+            <li><a href="" class="logo">smol.</a></li>
+            <li><a href="" class="menuLinks">about</a></li>
+            <li><a href="" class="menuLinks">blog</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="heroSection borderBottom">
+            <h1>
+                The perfect fit + <br>
+                total snooze-vibes = <br>
+                that'll be us.
+            </h1>
+
+            <button class="heroBtn">it's kind of our thing.</button>
+            <div class="line"></div>
+            </div>
+        </section>
+
+        <section class="secondSection borderBottom">
+            <div class="bestieSection">
+                <h2>hey bestie,</h2>
+                <h6>I don't know about you, but I feel like buying some gorgeous comfy 
+                    clothes! Imagine stepping into cashmere-soft joggers that drape effortlessly,
+                    with a whisper of silk peeking from beneath a linen tunic that flows like
+                    summer air. The kind of outfit that says "I'm prioritizing happiness and 
+                    comfort, but damn, I still look good doing it!" Are you with me?</h6>
+                <div class="imgContainer">
+
+                    <div class="imgs">
+                        <img src="assets/imgs/68268-OC5DDY-57-removebg-preview.png" alt="">
+                        <p><strong>shop cardigans</strong></p>
+                    </div>
+
+                    <div class="imgs">
+                        <img src="assets/imgs/729-removebg-preview.png" alt="" class="bottom">
+                        <p><strong>shop bottoms</strong></p>
+                    </div>
+
+                    <div class="imgs">
+                        <img src="assets/imgs/lqen_ymqq_210929-removebg-preview.png" alt="">
+                        <p><strong>shop tops</strong></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="imgGallery">
+            <div class="line"></div>
+            <button>follow us @smol.</button>
+        </div>
+        <section class="splide borderBottom" aria-labelledby="carousel-heading">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide"><img src="assets/imgs/girls hugging.webp" alt=""></li>
+                      <li class="splide__slide"><img src="assets/imgs/girl in glasses.webp" alt=""></li>
+                      <li class="splide__slide"><img src="assets/imgs/fashionquote.webp" alt=""></li>
+                      <li class="splide__slide"><img src="assets/imgs/women in red.webp" alt=""></li>
+                      <li class="splide__slide"><img src="assets/imgs/women with flowers.webp" alt=""></li>
+                      <li class="splide__slide"><img src="assets/imgs/lady in frock.webp" alt=""></li>
+                  </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="imgs">
+            <img src="assets/imgs/footer img.jpg" alt="" >
+        </div>
+        <div class="line"></div>
+        <div class="menu">
+          <ul class="box">
+            <li class="footerLogo"><strong>S</strong></li>
+            <li>about</li>
+            <li>new</li>
+            <li>shop</li>
+            <li>info</li>
+          </ul>
+        <div class="line"></div>
+        <div class="column3 box">
+            <h6>Lorem ipsum, dolor sit amet recusandae ratione ullam qui quatem consminima dolorem.</h6>
+            <button class="heroBtn">order now</button>
+        </div>
+    </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

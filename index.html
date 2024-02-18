@@ -39,6 +39,31 @@
             color: inherit;
             text-decoration: none;
         }
+        .line{
+            width: .2rem;
+            height: 6.5rem;
+            background-color: black;
+        }
+        
+        .borderBottom{
+            border-bottom: .2rem solid black;
+        }
+        .imgContainer{
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+        .imgs{
+            width: 10%;
+            max-width: 70%;
+            height: auto;
+        }
+        .imgs img{
+            width: 100%;
+            object-fit: contain;
+        }
+
+        /* announcement banner styling */
         .banner{
             display: flex;
             justify-content: center;
@@ -54,7 +79,9 @@
             border-start-end-radius: 1.2rem;
             border-bottom: .1rem solid black;
             font-size: 1.5rem;
-        }
+        } 
+
+        /* navbar styling */
         nav{
             display: flex;
             justify-content: center;
@@ -105,6 +132,8 @@
         .mobileLogo{
             display: none;
         }
+
+        /* first section styling */
         .heroSection{
             display: flex;
             justify-content: center;
@@ -130,18 +159,12 @@
             font-size: 1rem;
             font-style: italic;
         }
+
+        /* second section and carousal section styling */
         .imgGallery button{
             font-size: 1.2rem;
         }
-        .line{
-            width: .2rem;
-            height: 6.5rem;
-            background-color: black;
-        }
         
-        .borderBottom{
-            border-bottom: .2rem solid black;
-        }
         .bestieSection, .imgGallery{
             display: flex;
             justify-content: center;
@@ -165,20 +188,7 @@
             background-color: #f7c5ba;
             padding-top: 5rem ;
         }
-        .imgContainer{
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-        }
-        .imgs{
-            width: 10%;
-            max-width: 70%;
-            height: auto;
-        }
-        .imgs img{
-            width: 100%;
-            object-fit: contain;
-        }
+        
         .bottom{
             height: 55%;
         }
@@ -199,7 +209,7 @@
         .imgGallery .line{
             height: 2rem;
         }
-
+        /* footer styling */
         footer{
             display: flex;
             justify-content: center;
@@ -224,11 +234,9 @@
             border-radius: 2%;
             border: .1rem solid black;
             box-shadow: rgba(0, 0, 0, 0.21) 0px 3px 8px;
-            /* box-shadow: rgba(126, 29, 29, 0.2) 0px 2px 8px 0px; */
         }
         .box{
             padding: 3rem;
-            /* width: 60%; */
         }
         footer ul{
             display: flex;
@@ -249,10 +257,10 @@
             background: -moz-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
             background: -webkit-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
         }
-
+        /* media query for mobile only*/
         @media (max-width: 480px){
             .close{
-                left: 40% !important;
+                left: 33% !important;
             }
             .heroSection h1{
                 font-size: 2rem;
@@ -277,8 +285,6 @@
             }
             footer{
                 padding: .2rem 0 0.5rem 0;
-                /* gap: .1rem; */
-                /* justify-content: flex-start; */
             }
             footer .line{
                 display: none;
@@ -311,7 +317,7 @@
             }
 
         }
-
+        /* media query for mobile and tablet */
         @media (max-width: 786px) {
            
            .mobileLogo{
@@ -403,10 +409,12 @@
     </style>
 </head>
 <body>
+      <!-- *** Announcement banner***  -->
         <header class="banner">
             <h6>14% off on everything</h6>
         </header>
-        
+
+       <!-- **** navbar*** -->
     <nav>
         <div class="hamburgerMenu">
           <button class="menuBtn"><i class="fa-solid fa-bars-staggered"></i></button>
@@ -424,6 +432,7 @@
     </div>
     </nav>
 
+    <!-- *** First section *** -->
     <main>
         <section>
             <div class="heroSection borderBottom">
@@ -438,6 +447,7 @@
             </div>
         </section>
 
+            <!-- **** Second Section or bestie section*** -->
         <section class="secondSection borderBottom">
             <div class="bestieSection">
                 <h2>hey bestie,</h2>
@@ -466,6 +476,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- **** image carousal **** -->
         <div class="imgGallery">
             <div class="line"></div>
             <button><a href="">follow us @smol.</a></button>
@@ -483,6 +495,8 @@
             </div>
         </section>
     </main>
+
+    <!-- **** footer **** -->
     <footer>
         <div class="imgs box">
             <img src="assets/imgs/footer img.jpg" alt="" >

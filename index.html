@@ -31,7 +31,13 @@
         body{
             background-color: #f4ebe4;
             font-family: lora;
-
+        }
+        button{
+            cursor: pointer;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
         }
         .banner{
             display: flex;
@@ -270,34 +276,40 @@
                 height: auto;
             }
             footer{
-                padding: 1rem 0 0.5rem 0;
-                gap: .1rem;
+                padding: .2rem 0 0.5rem 0;
+                /* gap: .1rem; */
+                /* justify-content: flex-start; */
             }
             footer .line{
                 display: none;
             }
             footer .menu{
                 flex-wrap: wrap;
+                align-items: flex-start;
             }
-           .column3{
+            .column3{
                 display: flex;
                 flex-direction: column;
                 width: 80%;
                 text-align: center;
             }
-           .box{
+            .box{
                 padding: .5rem;
             }
-           footer ul{
+            footer ul{
                 display: flex;
                 flex-direction: row;
             }
-           footer ul li{
+            footer ul li{
                 padding: .3rem;
             }
-           footer img{
+            footer .imgs{
                 display: none;
             }
+            .footerLinks{
+                margin-top: 1rem;
+            }
+
         }
 
         @media (max-width: 786px) {
@@ -380,6 +392,9 @@
             .bestieSection h6{
                 margin: 0 5% 1rem 5%;
             }
+            footer .imgs{
+                width: 60%;
+            }
         }
 
          
@@ -418,7 +433,7 @@
                 that'll be us.
             </h1>
 
-            <button class="heroBtn">it's kind of our thing.</button>
+            <button><a href="">it's kind of our thing</a>.</button>
             <div class="line"></div>
             </div>
         </section>
@@ -453,7 +468,7 @@
         </section>
         <div class="imgGallery">
             <div class="line"></div>
-            <button>follow us @smol.</button>
+            <button><a href="">follow us @smol.</a></button>
         </div>
         <section class="splide borderBottom" aria-labelledby="carousel-heading">
             <div class="splide__track">
@@ -476,15 +491,15 @@
         <div class="menu">
           <ul class="box">
             <li class="footerLogo"><strong>S</strong></li>
-            <li>about</li>
-            <li>new</li>
-            <li>shop</li>
-            <li>info</li>
+            <li class="footerLinks">about</li>
+            <li class="footerLinks">new</li>
+            <li class="footerLinks">shop</li>
+            <li class="footerLinks">info</li>
           </ul>
         <div class="line"></div>
         <div class="column3 box">
             <h6>Experience the epitome of luxury and style with our exquisite range. Because every woman deserves to feel extraordinary, every day.</h6>
-            <button>order now</button>
+            <button><a href="">order now</a></button>
         </div>
     </div>
     </footer>

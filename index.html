@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.js">
     <script src="https://kit.fontawesome.com/0d437a0576.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/font/Magic Sound.ttf">
     <link rel="stylesheet" href="assets/font/Lora-Regular.ttf">
+    <link rel="stylesheet" href="assets/font/NotoSans-Regular.ttf">
     <link rel="stylesheet" href="assets/splide/css/themes/splide-default.min.css">
     <script src="assets/splide/js/splide.min.js"></script>
     <title>Document</title>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        @font-face {
+            font-family: noto;
+            src: url(assets/font/NotoSans-Regular.ttf);
+        }
         @font-face {
             font-family: lora;
             src: url(assets/font/Lora-Regular.ttf);
@@ -22,6 +30,8 @@
         }
         body{
             background-color: #f4ebe4;
+            font-family: lora;
+
         }
         .banner{
             display: flex;
@@ -37,6 +47,7 @@
             border-start-start-radius: 1.2rem;
             border-start-end-radius: 1.2rem;
             border-bottom: .1rem solid black;
+            font-size: 1.5rem;
         }
         nav{
             display: flex;
@@ -109,8 +120,12 @@
             background-color: inherit;
             border-radius: 20rem;
             padding: .2rem 2.2rem .2rem 2.2rem;
-            font-weight: 500;
+            font-weight: 550;
+            font-size: 1rem;
             font-style: italic;
+        }
+        .imgGallery button{
+            font-size: 1.2rem;
         }
         .line{
             width: .2rem;
@@ -131,11 +146,14 @@
         }
         .bestieSection h2{
             color: #534332;
+            font-size: 2rem;
         }
         .bestieSection h6{
             text-align: center;
-            margin: 0 20% 1rem 20%;
+            margin: 1rem 20% 1rem 20%;
             line-height: 1.5rem;
+            font-family: noto;
+            font-size: 1rem;
         }
         .secondSection{
             background-color: #f7c5ba;
@@ -204,6 +222,7 @@
         }
         .box{
             padding: 3rem;
+            /* width: 60%; */
         }
         footer ul{
             display: flex;
@@ -214,7 +233,11 @@
             text-transform: uppercase;
             font-weight: 700;
         }
+        footer .column3 h6{
+            font-size: 1rem;
+        }
         footer button{
+            margin-top: .5rem;
             background: hsla(13, 100%, 90%, 1);
             background: linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
             background: -moz-linear-gradient(180deg, hsla(13, 100%, 90%, 1) 50%, hsla(31, 100%, 80%, 1) 80%);
@@ -222,6 +245,9 @@
         }
 
         @media (max-width: 480px){
+            .close{
+                left: 40% !important;
+            }
             .heroSection h1{
                 font-size: 2rem;
                 font-weight: 600;
@@ -285,7 +311,7 @@
            .menuBtn{
                 position: absolute;
                 top: 12%;
-                left: 5%;
+                left: 3%;
                 background-color: inherit;
                 border: none;
                 font-size: 1.5rem;
@@ -294,7 +320,7 @@
            .close{
                 position: absolute;
                 top: 10%;
-                left: 50%;
+                left: 15%;
                 z-index: 1;
                 background-color: #D82604;
                 border: none;
@@ -409,17 +435,17 @@
 
                     <div class="imgs">
                         <img src="assets/imgs/68268-OC5DDY-57-removebg-preview.png" alt="">
-                        <p><strong>shop cardigans</strong></p>
+                        <p><strong>Shop Cardigans</strong></p>
                     </div>
 
                     <div class="imgs">
                         <img src="assets/imgs/729-removebg-preview.png" alt="" class="bottom">
-                        <p><strong>shop bottoms</strong></p>
+                        <p><strong>Shop Bottoms</strong></p>
                     </div>
 
                     <div class="imgs">
                         <img src="assets/imgs/lqen_ymqq_210929-removebg-preview.png" alt="">
-                        <p><strong>shop tops</strong></p>
+                        <p><strong>Shop Tops</strong></p>
                     </div>
 
                 </div>
@@ -443,7 +469,7 @@
         </section>
     </main>
     <footer>
-        <div class="imgs">
+        <div class="imgs box">
             <img src="assets/imgs/footer img.jpg" alt="" >
         </div>
         <div class="line"></div>
@@ -457,8 +483,8 @@
           </ul>
         <div class="line"></div>
         <div class="column3 box">
-            <h6>Lorem ipsum, dolor sit amet recusandae ratione ullam qui quatem consminima dolorem.</h6>
-            <button class="heroBtn">order now</button>
+            <h6>Experience the epitome of luxury and style with our exquisite range. Because every woman deserves to feel extraordinary, every day.</h6>
+            <button>order now</button>
         </div>
     </div>
     </footer>
